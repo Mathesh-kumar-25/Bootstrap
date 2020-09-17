@@ -31,7 +31,8 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginmodal"> <span class="fa fa-sign-in"></span> Login</a>
+                    <!-- <a data-toggle="modal" data-target="#loginmodal"> <span class="fa fa-sign-in"></span> Login</a> -->
+                    <a id="buttonLogin" type="button" role="button"> <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
@@ -149,7 +150,8 @@
                     <img src="img/img/logo.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-12 col-sm-3 reserve-button">
-                    <a class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#reservebutton"> Reserve Button</a>
+                    <!-- <a class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#reservebutton"> Reserve Button</a> -->
+                    <a id="buttonReservation" type="button" class="btn btn-warning btn-sm btn-block" role="button"> Reserve Button</a>
                 </div>
             </div>
         </div>
@@ -298,6 +300,8 @@
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+        <!-- <script src="js/scripts.js"></script> -->
+
         <script>
             $(document).ready(function(){
                 $('#mycarousel').carousel({interval:2000});
@@ -313,6 +317,12 @@
                         $('#carouselButton').children('span').addClass('fa-pause');
                     }
                 });
+            });
+            $("#buttonLogin").click(function(){
+                $('#loginmodal').modal('show');
+            });
+            $("#buttonReservation").click(function(){
+                $('#reservebutton').modal('show');
             });
         </script>
 
